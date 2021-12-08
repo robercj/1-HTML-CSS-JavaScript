@@ -1,0 +1,41 @@
+.iconInInfo { height: .7em!important; width: .7em!important; }
+a, .instancename {font-weight: 400!important }
+#pageintro, .mod_introbox { padding: 0}
+#frontblockregion { padding-left: 20px }
+#frontblockregion .row { border: 1px solid #e8eaeb }
+#frontblockregion .block .content { border-width: 0px 0px 0px 0px!important }
+#page-course-view-weeks #block-region-side-post { padding-right: 8px!important; padding-top:13px }
+#block-region-course-top-b { border: solid #e8eaeb; border-width: 0px 1px 0px 1px }
+nav.activity_footer { margin-top: 10em }
+.navbottom .icon { font-size: 24px; width: 24px; height: 24px }
+.section-title a { color: unset!important }
+.frontpage-course-list-all .coursebox.panel .panel-body { border: 1px solid #A83EA2 } 
+.navbar-nav .simplesearchform { width: 120px }
+@media only screen and (min-width: 980px) and (max-width: 1280px) { .fullin #main-navbar .navbar-nav .nav-link { padding: 0 10px!important } }
+@media only screen and (max-width: 1050px) { .fullin .navbar-nav #editingbutton .btn-link { display:none!important } }
+.fullin .navbar-nav .simplesearchform  { display:none!important }
+.navbarsearchsocial { display:none!important }
+/* @media only screen and (max-width: 1050px) { .fullin .navbar-nav .simplesearchform  { display:none!important } }
+@media only screen and (max-width: 1200px) { .fullin .navbar-nav .simplesearchform  { width: 100px } }
+@media only screen and (min-width: 1201px) { .fullin .navbar-nav .simplesearchform  { width: 200px } } */
+#userprofiletabs .aboutme { padding-left: 15px; padding-right: 15px }
+#userprofiletabs .coursedetails { padding-left: 15px; padding-right: 15px }
+#userprofiletabs .customfields { padding-left: 15px; padding-right: 15px }
+#adaptable-page-header-wrapper #logo { margin-top: 8px; height: 40px; padding-right: 12px;}
+.fullin #adaptable-page-header-wrapper #coursetitle { margin-top: 10px; font-size: 36px }
+#sitetitle { align-self: center;} 
+#adaptable-page-header-wrapper #coursetitle { margin-top: unset!important } 
+.dashboard-card-deck { padding-top: 16px }
+.frontpage-course-list-all .coursebox { padding: 5px}
+.block_messageteacher ul { list-style-type: none; }
+h1, h2, h3, h4, h5, h6 { margin: 10px 0px}
+html, body { line-height: 1.6;}
+.all-notifications .content-item-body .notification-message { color: #51666C }
+.dashboard-card-deck .dashboard-card .dashboard-card-img { height: 12rem; background-position: center; background-size: contain; background-repeat: no-repeat; }
+#adaptable-tab-more .localbadges { text-align: left; width: auto} 
+#region-main .row { margin-right: 0px; margin-left: 0px;}
+#page-site-index #region-main { padding-top: 0px }
+#region-main .generalbox a { text-decoration: underline; text-underline-offset: 3px}
+.block_messageteacher .content { overflow-y: scroll; height: 150px;}
+.automatic-completion-conditions .badge { font-size: 80%; }
+.ad-activity-wrapper .activity-information { padding-left: 4px; }

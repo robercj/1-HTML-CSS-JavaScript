@@ -1,0 +1,92 @@
+body {
+    background: #40969c;
+    font-family: Tahoma, Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font: 32px Garamond, Helvetica, serif;
+    text-shadow: 2px 2px black;
+}
+h2 {
+    text-align: center;
+    text-shadow: 2px 2px white;
+}
+
+table {
+    border: 5px double black;
+    margin: auto;
+
+}
+
+thead {
+    text-align: center;
+    padding-bottom: 0%;
+}
+
+label {
+    display: block;
+}
+
+#submit-btn {
+    display: block;
+    margin: auto;
+    background-color: #333;
+    color: white;
+}
+
+a {
+    color: green;
+}
+
+a:visited {
+    color: pink;
+}
+
+a:hover {
+    color: yellow;
+}
+
+#tableItem {
+    color: pink;
+}
+
+#tableCost {
+    color: green;
+}
+
+td {
+    text-decoration: underline;
+    color: yellow;
+}
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 7px;
+    background: #333;
+    border: none;
+    border-radius: 2px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: red;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: black;
+
+
