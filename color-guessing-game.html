@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h, initial-scale=1.0">
+    <title>Color Guessing Game</title>
+</head>
+<body>
+    <h1>Color Guessing Game</h1>
+    <button type="button" onclick="runGame()">Start Game</button>
+
+<script>
+
+const COLORS_ARRAY = ['blue','cyan','gold','gray','green','magenta','orange','red','white','yellow']
+COLORS_ARRAY.sort();
+
+function runGame() {
+let guess = '';
+let correct = false;
+let numTries = 0
+const targetIndex = [Math.floor(Math.random() * COLORS_ARRAY.length )]
+const target = COLORS_ARRAY[targetIndex]
+console.log(target)
+while(!correct) {
+guess = prompt('I am thinking of one of these colors:\n\n' + COLORS_ARRAY + '\n\nWhat Color am I thinking of?\n' )
+numTries++;
+    if(guess === null) {
+    alert('QUITTER!!')
+    console.log(guess);
+    return
+    };
+correct = checkGuess(guess, target);
+};
+alert('YOU GOT IT DUDE! only ' + numTries + ' attempts!\n\n' + 'Click OK to see the color!')
+document.body.style.background = guess;
+};
+
+function checkGuess(guess, target) {
+let correct = false
+if(!COLORS_ARRAY.includes(guess)) {
+console.log('NOT A VALID ANSWER')
+return alert('NOT A VALID ANSWER!')
+}
+else if(guess < target) {
+    console.log('Your Answer is Alphabetically Lower'
+    )
+    alert('Your answer is alphabetically lower!')
+    return
+}
+else if(guess > target) {
+    console.log('your answer is alphabetically higher')
+    alert('your answer is alphabetically higher')
+}
+else {
+    correct = true
+}
+return correct
+};
+</script>
+</body>
+</html>

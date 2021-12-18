@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!--BEGIN HEAD-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<style>
+/* BEGIN CSS STYLING */
+        img {
+            position:absolute;
+        }
+        div {
+            position:absolute;
+            width: 500px;
+            height: 500px;
+        }
+        #rightSide {
+            left: 500px;
+            border-left: 1px solid;
+        }
+/* END CSS STYLING */
+</style>
+
+
+<!--TITLE-->
+    <title>Matching Game</title>
+<!--END TITLE-->
+
+
+<!--END HEAD-->
+</head>
+
+
+<!--BEGIN GAME BOARD-->
+<body onload="generateFaces()">
+    <h1>Matching Game</h1>
+    <h2>Click on the extra smiling face on the left.</h2>
+
+    <div id="leftSide"></div>
+    <div id="rightSide"></div>
+<!--GAME BOARD END-->
+
+
+<script>
+/* BEGIN JAVASCRIPT */
+
+
+/* GLOBAL VARIABLES */
+    let numberOfFaces = 5
+    const theLeftSide = document.querySelector('#leftSide')
+    const theRightSide = document.querySelector('#rightSide')
+/* CORE GAME LOGIC */
+
+
+function generateFaces() {
+    for(i = 0; i <= numberOfFaces; i++) {
+        let face = document.createElement('img')
+        face.src = 'images/smile.png';
+        randomTop = Math.floor(Math.random() * 400)
+        randomLeft = Math.floor(Math.random() * 400)
+        face.style.top = randomTop + 'px';
+        face.style.left = randomLeft + 'px';
+        theLeftSide.appendChild(face)
+    };
+    const leftSideImages = theLeftSide.cloneNode(true)
+    leftSideImages.removeChild(leftSideImages.lastElementChild)
+    theRightSide.appendChild(leftSideImages)
+    theLeftSide.lastElementChild.addEventListener('click', nextLevel)
+    document.body.addEventListener('click', gameOver)
+}
+
+
+/* LEVEL/DIFFICULTY FUNCTION */
+function nextLevel() {
+    event.stopPropagation();
+    numberOfFaces += 5;
+    while (theRightSide.firstChild) {
+        theRightSide.removeChild(theRightSide.firstElementChild)
+    }
+    while (theLeftSide.firstChild) {
+        theLeftSide.removeChild(theLeftSide.firstElementChild)
+    }
+    generateFaces();
+}
+
+
+/* GAME OVER */
+function gameOver() {
+    alert('Game OVER!!!')
+    document.body.removeEventListener('click', gameOver)
+    theLeftSide.lastElementChild.removeEventListener('click', nextLevel)
+    location.reload()
+}
+
+
+/*END JAVASCRIPT*/
+</script>
+</body>
+</html>
